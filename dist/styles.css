@@ -22,3 +22,31 @@ textarea {
   left: 5px;
   top: 450px;
 }
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+
+.tile {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 23%;
+  height: 500px;
+  box-sizing: border-box;
+}
+
+
+.viewport {
+  flex-grow: 1;
+  width: 100%;
+  background-color: #e0e0e0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px;
+}

@@ -3,7 +3,7 @@ const path = require('path')
 const webpack = require('webpack')
 const CopyPlugin = require('copy-webpack-plugin')
 
-const entry = path.join(__dirname, 'index.js')
+const entry = path.join(__dirname, 'index.ts')
 const outputPath = path.join(__dirname, './dist')
 
 module.exports = {
@@ -18,7 +18,15 @@ module.exports = {
   },
   module: {
     rules: [
-      { test: /\.js$/, loader: 'babel-loader' }
+      { 
+        test: /\.(ts|tsx)?$/,
+        loader: 'ts-loader',
+        options: {allowTsInNodeModules: true},
+      },
+      {
+        test: /\.js$/,
+        loader: 'babel-loader',
+      }
     ]
   },
   plugins: [
@@ -39,6 +47,7 @@ module.exports = {
     //]})
   ],
   resolve: {
+    extensions: [".ts", ".js"],
     fallback: { fs: false, path: false, url: false, module: false },
   },
   performance: {
