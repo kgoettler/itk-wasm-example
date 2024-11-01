@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "build:cpp": "DOCKCROSS_IMAGE=kbg/emscripten:latest npx itk-wasm -i kbg/emscripten:latest --build-dir dist/emscripten-build build -- -DCMAKE_BUILD_TYPE=Debug ",
-    "build:cpp:prod": "npx itk-wasm --build-dir dist/emscripten-build build",
+    "build:cpp": "DOCKCROSS_IMAGE=itkwasm/emscripten:20241030-6c93a1be-debug npx itk-wasm -i itkwasm/emscripten:20241030-6c93a1be-debug --build-dir dist/emscripten-build build -- -DCMAKE_BUILD_TYPE=Debug ",
+    "build:cpp:prod": "DOCKCROSS_IMAGE=itkwasm/emscripten:20241030-6c93a1be npx itk-wasm -i itkwasm/emscripten:20241030-6c93a1be --build-dir dist/emscripten-build build",
     "start": "webpack-dev-server --port 8686 --mode development --static ./dist/",
     "start:production": "webpack-dev-server --port 8686 --mode production --static ./dist/"
   },

@@ -128,7 +128,7 @@ export class ImageViewer {
         type: cornerstone.Enums.ViewportType.STACK,
         element: value,
         defaultOptions: {
-          background: <cornerstone.Types.Point3>[0.2, 0, 0.2],
+          background: <cornerstone.Types.Point3>[0, 0, 0],
         },
       });
     }
